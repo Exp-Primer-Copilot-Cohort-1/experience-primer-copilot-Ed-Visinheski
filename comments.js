@@ -69,4 +69,6 @@ router.put('/comments/:comment_id', function(req, res){
 
 router.delete('/comments/:comment_id', function(req, res){
   Comment.remove({_id: req.params.comment_id}, function(err, output){
-    if(err) return res.status(500).json
+    if(err) return res.status(500).json();
+  });
+});
